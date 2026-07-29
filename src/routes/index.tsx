@@ -151,7 +151,7 @@ function Landing() {
       </motion.div>
 
       {/* Fixed chrome */}
-      <header className="fixed top-0 right-0 left-0 z-40 flex items-center justify-between px-6 py-6 md:px-10">
+      <header className="fixed top-0 right-0 left-0 z-40 flex items-center justify-between bg-gradient-to-b from-background/85 to-transparent px-6 py-6 backdrop-blur-[2px] md:px-10">
         <span className="font-display text-lg tracking-[0.16em] text-foreground">ATLAS</span>
         <span className="hidden font-mono text-[10px] tracking-[0.3em] text-muted-foreground md:block">
           CHRONOS · REF. 001 · TITANIUM

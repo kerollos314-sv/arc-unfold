@@ -305,12 +305,12 @@ function Landing() {
         <p className="mt-6 max-w-md font-light text-muted-foreground">
           500 pieces, numbered on the caseback. Reservations open to the register first.
         </p>
-        <a
-          href="#reserve"
+        <Link
+          to="/buy"
           className="mt-10 border border-primary/60 bg-primary/10 px-10 py-4 font-mono text-[11px] tracking-[0.3em] text-primary uppercase transition-colors hover:bg-primary hover:text-primary-foreground"
         >
           Join the register
-        </a>
+        </Link>
         <div className="mt-14 hairline max-w-xl" />
         <div className="mt-8 font-mono text-[10px] tracking-[0.28em] text-muted-foreground">
           ATLAS INSTRUMENTS · GENÈVE · MMXXVI

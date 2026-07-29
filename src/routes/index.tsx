@@ -171,7 +171,7 @@ function Landing() {
           {/* Hero */}
           <motion.div
             style={{ opacity: heroOpacity, y: heroY }}
-            className="pointer-events-none absolute inset-0 flex flex-col items-center justify-end pb-14 text-center"
+            className="pointer-events-none absolute inset-0 z-10 flex flex-col items-center justify-end pb-14 text-center"
           >
             <div className="label-eyebrow">Chapter 00 — The Instrument</div>
             <h1 className="mt-6 font-display text-[clamp(3.2rem,11vw,9rem)] leading-[0.86] tracking-[-0.035em] text-steel">
@@ -257,7 +257,7 @@ function Landing() {
             align="center"
           />
 
-          <div className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-[image:var(--gradient-fade)]" />
+          <div className="pointer-events-none absolute inset-x-0 bottom-0 h-72 bg-[image:var(--gradient-fade)]" />
         </div>
       </section>
 

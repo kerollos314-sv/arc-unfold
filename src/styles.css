@@ -37,7 +37,7 @@
   --color-copper: var(--copper);
   --color-steel: var(--steel);
   --color-onyx: var(--onyx);
-  --font-display: "Instrument Serif", "Times New Roman", serif;
+  --font-display: "Playfair Display", "Times New Roman", serif;
   --font-sans: "Archivo", "Helvetica Neue", sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, monospace;
 }

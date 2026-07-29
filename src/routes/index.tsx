@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { useRef, useState } from "react";
 import { motion, useScroll, useSpring, useTransform, type MotionValue } from "motion/react";
 import { SequenceCanvas } from "@/components/watch/SequenceCanvas";
@@ -150,20 +150,6 @@ function Landing() {
         </div>
       </motion.div>
 
-      {/* Fixed chrome */}
-      <header className="fixed top-0 right-0 left-0 z-40 flex items-center justify-between bg-gradient-to-b from-background/85 to-transparent px-6 py-6 backdrop-blur-[2px] md:px-10">
-        <span className="font-display text-lg tracking-[0.16em] text-foreground">ATLAS</span>
-        <span className="hidden font-mono text-[10px] tracking-[0.3em] text-muted-foreground md:block">
-          CHRONOS · REF. 001 · TITANIUM
-        </span>
-        <a
-          href="#reserve"
-          className="border border-border px-4 py-2 font-mono text-[10px] tracking-[0.24em] text-foreground uppercase transition-colors hover:border-primary hover:text-primary"
-        >
-          Reserve
-        </a>
-      </header>
-
       {/* Scrollytelling stage */}
       <section ref={sectionRef} className="relative h-[760vh]">
         <div className="sticky top-0 h-screen w-full overflow-hidden">
@@ -180,18 +166,27 @@ function Landing() {
           {/* Hero */}
           <motion.div
             style={{ opacity: heroOpacity, y: heroY }}
-            className="pointer-events-none absolute inset-0 z-10 flex flex-col items-center justify-end pb-14 text-center"
+            className="absolute inset-0 z-10 flex flex-col items-center justify-end pb-14 text-center"
           >
-            <div className="label-eyebrow">Chapter 00 — The Instrument</div>
-            <h1 className="mt-6 font-display text-[clamp(3.2rem,11vw,9rem)] leading-[0.86] tracking-[-0.035em] text-steel">
-              CHRONOS
+            <div className="label-eyebrow">Limited first series</div>
+            <h1 className="mt-5 font-display text-[clamp(2.6rem,9vw,7.5rem)] leading-[0.88] tracking-[-0.035em] text-steel">
+              ATLAS CHRONOS
             </h1>
-            <p className="mt-6 max-w-xs font-light text-muted-foreground md:max-w-sm">
-              187 components. One instrument. Scroll to take it apart.
+            <p className="mt-6 max-w-xs font-light text-muted-foreground md:max-w-md">
+              500 pieces, numbered on the caseback. Reservations open to the register first.
             </p>
-            <div className="mt-10 flex flex-col items-center gap-3">
+            <Link
+              to="/buy"
+              className="mt-8 border border-primary/60 bg-primary/10 px-8 py-3.5 font-mono text-[11px] tracking-[0.3em] text-primary uppercase transition-colors hover:bg-primary hover:text-primary-foreground"
+            >
+              Join the register
+            </Link>
+            <div className="pointer-events-none mt-9 flex flex-col items-center gap-3">
               <span className="font-mono text-[10px] tracking-[0.32em] text-muted-foreground">
-                SCROLL
+                CHAPTER 00 · THE INSTRUMENT
+              </span>
+              <span className="font-mono text-[10px] tracking-[0.32em] text-muted-foreground">
+                SCROLL TO EXPLORE THE 187 COMPONENTS
               </span>
               <motion.span
                 style={{ originY: 0 }}
@@ -310,12 +305,12 @@ function Landing() {
         <p className="mt-6 max-w-md font-light text-muted-foreground">
           500 pieces, numbered on the caseback. Reservations open to the register first.
         </p>
-        <a
-          href="#reserve"
+        <Link
+          to="/buy"
           className="mt-10 border border-primary/60 bg-primary/10 px-10 py-4 font-mono text-[11px] tracking-[0.3em] text-primary uppercase transition-colors hover:bg-primary hover:text-primary-foreground"
         >
           Join the register
-        </a>
+        </Link>
         <div className="mt-14 hairline max-w-xl" />
         <div className="mt-8 font-mono text-[10px] tracking-[0.28em] text-muted-foreground">
           ATLAS INSTRUMENTS · GENÈVE · MMXXVI

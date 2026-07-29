@@ -171,7 +171,7 @@ function Landing() {
           {/* Hero */}
           <motion.div
             style={{ opacity: heroOpacity, y: heroY }}
-            className="pointer-events-none absolute inset-0 flex flex-col items-center justify-center text-center"
+            className="pointer-events-none absolute inset-0 flex flex-col items-center justify-end pb-14 text-center"
           >
             <div className="label-eyebrow">Chapter 00 — The Instrument</div>
             <h1 className="mt-6 font-display text-[clamp(3.2rem,11vw,9rem)] leading-[0.86] tracking-[-0.035em] text-steel">
@@ -180,7 +180,7 @@ function Landing() {
             <p className="mt-6 max-w-xs font-light text-muted-foreground md:max-w-sm">
               187 components. One instrument. Scroll to take it apart.
             </p>
-            <div className="mt-14 flex flex-col items-center gap-3">
+            <div className="mt-10 flex flex-col items-center gap-3">
               <span className="font-mono text-[10px] tracking-[0.32em] text-muted-foreground">
                 SCROLL
               </span>

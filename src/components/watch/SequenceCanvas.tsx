@@ -44,7 +44,7 @@ export function SequenceCanvas({
     const dw = img.naturalWidth * scale;
     const dh = img.naturalHeight * scale;
 
-    ctx.filter = "brightness(0.48) contrast(1.24) saturate(1.18)";
+    ctx.filter = "brightness(0.6) contrast(1.18) saturate(1.15)";
     ctx.drawImage(img, (w - dw) / 2, (h - dh) / 2, dw, dh);
     ctx.filter = "none";
 
@@ -57,7 +57,7 @@ export function SequenceCanvas({
       Math.max(w, h) * 0.72,
     );
     grd.addColorStop(0, "rgba(0,0,0,0)");
-    grd.addColorStop(1, "rgba(0,0,0,0.86)");
+    grd.addColorStop(1, "rgba(0,0,0,0.8)");
     ctx.fillStyle = grd;
     ctx.fillRect(0, 0, w, h);
   };

@@ -78,7 +78,7 @@ function Chapter({
           <span className="h-px w-8 bg-primary/70" />
           <span className="label-eyebrow">{eyebrow}</span>
         </div>
-        <h2 className="font-display text-[clamp(2.2rem,5vw,4rem)] leading-[0.98] tracking-[-0.02em] text-steel">
+        <h2 className="font-display text-[clamp(2.2rem,5vw,4rem)] leading-[0.98] tracking-[-0.02em] whitespace-pre-line text-steel">
           {title}
         </h2>
         <p className="mt-5 max-w-sm text-[0.95rem] leading-relaxed font-light text-muted-foreground">

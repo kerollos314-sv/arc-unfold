@@ -115,9 +115,9 @@ function Landing() {
   });
   const smooth = useSpring(scrollYProgress, { stiffness: 220, damping: 42, mass: 0.35 });
 
-  const heroOpacity = useTransform(scrollYProgress, [0, 0.07], [1, 0]);
-  const heroScale = useTransform(scrollYProgress, [0, 0.12], [1, 1.08]);
-  const heroY = useTransform(scrollYProgress, [0, 0.1], [0, -60]);
+  const heroOpacity = useTransform(smooth, [0, 0.07], [1, 0]);
+  const heroScale = useTransform(smooth, [0, 0.12], [1, 1.08]);
+  const heroY = useTransform(smooth, [0, 0.1], [0, -60]);
 
   const pct = Math.round((loaded / total) * 100);
   const booting = loaded < total;
@@ -194,7 +194,7 @@ function Landing() {
           </motion.div>
 
           <Chapter
-            progress={scrollYProgress}
+            progress={smooth}
             range={[0.16, 0.32]}
             index="01"
             eyebrow="Exterior"
@@ -207,7 +207,7 @@ function Landing() {
           />
 
           <Chapter
-            progress={scrollYProgress}
+            progress={smooth}
             range={[0.36, 0.52]}
             index="02"
             eyebrow="Optics"
@@ -221,7 +221,7 @@ function Landing() {
           />
 
           <Chapter
-            progress={scrollYProgress}
+            progress={smooth}
             range={[0.56, 0.72]}
             index="03"
             eyebrow="Silicon"
@@ -234,7 +234,7 @@ function Landing() {
           />
 
           <Chapter
-            progress={scrollYProgress}
+            progress={smooth}
             range={[0.76, 0.9]}
             index="04"
             eyebrow="Sensing"
@@ -248,7 +248,7 @@ function Landing() {
           />
 
           <Chapter
-            progress={scrollYProgress}
+            progress={smooth}
             range={[0.9, 0.995]}
             index="05"
             eyebrow="Assembly"

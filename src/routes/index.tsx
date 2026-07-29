@@ -29,12 +29,15 @@ type Range = [number, number];
 
 function useReveal(progress: MotionValue<number>, [start, end]: Range) {
   const fade = 0.055;
-  const opacity = useTransform(
-    progress,
-    [start - fade, start + fade, end - fade, end + fade],
-    [0, 1, 1, 0],
-  );
-  const y = useTransform(progress, [start - fade, start + fade, end - fade, end + fade], [34, 0, 0, -34]);
+  const stops = [start - fade, start + fade, end - fade, end + fade]
+    .map((v) => Math.min(1, Math.max(0, v)))
+    .reduce<number[]>((acc, v) => {
+      const prev = acc[acc.length - 1];
+      acc.push(prev !== undefined && v <= prev ? Math.min(1, prev + 0.001) : v);
+      return acc;
+    }, []);
+  const opacity = useTransform(progress, stops, [0, 1, 1, 0]);
+  const y = useTransform(progress, stops, [34, 0, 0, -34]);
   const blur = useTransform(opacity, [0, 1], [10, 0]);
   const filter = useTransform(blur, (b: number) => `blur(${b}px)`);
   return { opacity, y, filter };
@@ -246,7 +249,7 @@ function Landing() {
 
           <Chapter
             progress={scrollYProgress}
-            range={[0.93, 1.06]}
+            range={[0.9, 0.995]}
             index="05"
             eyebrow="Assembly"
             title="Whole again"

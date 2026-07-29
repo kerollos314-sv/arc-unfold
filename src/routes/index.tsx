@@ -75,7 +75,16 @@ function Chapter({
       style={{ opacity, y, filter }}
       className={`pointer-events-none absolute inset-0 flex px-6 md:px-16 lg:px-24 ${position}`}
     >
-      <div className={`max-w-md ${align === "center" ? "max-w-2xl" : ""}`}>
+      <div
+        className={`absolute inset-y-0 ${
+          align === "center"
+            ? "inset-x-0 top-auto h-1/2 bg-gradient-to-t from-background/90 to-transparent"
+            : align === "right"
+              ? "right-0 w-full bg-gradient-to-l from-background/92 via-background/45 to-transparent md:w-3/5"
+              : "left-0 w-full bg-gradient-to-r from-background/92 via-background/45 to-transparent md:w-3/5"
+        }`}
+      />
+      <div className={`relative max-w-md ${align === "center" ? "max-w-2xl" : ""}`}>
         <div className="mb-5 flex items-center gap-3">
           <span className="font-mono text-[10px] tracking-[0.3em] text-muted-foreground">{index}</span>
           <span className="h-px w-8 bg-primary/70" />

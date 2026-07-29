@@ -182,7 +182,8 @@ function Landing() {
                 SCROLL
               </span>
               <motion.span
-                animate={{ scaleY: [0.2, 1, 0.2], originY: 0 }}
+                style={{ originY: 0 }}
+                animate={{ scaleY: [0.2, 1, 0.2] }}
                 transition={{ duration: 2.4, repeat: Infinity, ease: "easeInOut" }}
                 className="h-12 w-px bg-primary/70"
               />
@@ -245,7 +246,7 @@ function Landing() {
 
           <Chapter
             progress={scrollYProgress}
-            range={[0.93, 1.02]}
+            range={[0.93, 1.06]}
             index="05"
             eyebrow="Assembly"
             title="Whole again"
